@@ -1,17 +1,15 @@
-import { React, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { React } from "react";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import EventPage from "./pages/EventPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <>
-        <h1>dsadada</h1>
-      </>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/events/:eId" element={<EventPage />} />
+    </Routes>
   );
 }
 
